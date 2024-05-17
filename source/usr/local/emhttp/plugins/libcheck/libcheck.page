@@ -6,5 +6,5 @@ Tag="cubes"
 Markdown="false"
 ---
 <pre>
-<?=shell_exec("/usr/bin/libcheck);?>
+<?=shell_exec("/usr/bin/libcheck");?>
 </pre>
