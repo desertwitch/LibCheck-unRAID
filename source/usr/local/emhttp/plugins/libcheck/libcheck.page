@@ -1,6 +1,6 @@
 Menu="OtherSettings"
 Type="xmenu"
-Title="Missing PKG Libraries"
+Title="Missing Libraries"
 Icon="cubes"
 Tag="cubes"
 Markdown="false"
