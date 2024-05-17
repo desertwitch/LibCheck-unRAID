@@ -1,0 +1,65 @@
+<?xml version='1.0' standalone='yes'?>
+
+<!DOCTYPE PLUGIN [
+<!ENTITY name      "libcheck">
+<!ENTITY author    "desertwitch">
+<!ENTITY version   "2024.05.17">
+<!ENTITY launch    "Settings/libcheck">
+<!ENTITY gitURL    "https://raw.githubusercontent.com/&author;/LibCheck-unRAID/main">
+<!ENTITY pluginURL "&gitURL;/plugin/&name;.plg">
+<!ENTITY pkgURL    "&gitURL;/packages">
+<!ENTITY plgPATH   "/boot/config/plugins/&name;">
+<!ENTITY plgNAME   "mergerfsp-2024.04.26-x86_64-1">
+<!ENTITY plgMD5    "de4346722d80a447b18623be3f42f63d">
+<!ENTITY emhttp    "/usr/local/emhttp/plugins/&name;">
+]>
+
+<PLUGIN name="&name;" author="&author;" version="&version;" launch="&launch;" pluginURL="&pluginURL;" icon="cubes">
+
+<CHANGES>
+## LibCheck for UNRAID
+###2024.05.17
+- release note: first package of the script
+</CHANGES>
+
+<!--
+install or upgrade the plugin itself
+-->
+<FILE Name="&plgPATH;/&plgNAME;.txz" Run="upgradepkg --install-new">
+<URL>&gitURL;/archive/&plgNAME;.txz</URL>
+<MD5>&plgMD5;</MD5>
+</FILE>
+
+<!--
+run the post-installation scripts
+-->
+<FILE Run="/bin/bash">
+<INLINE> 
+echo ""
+echo "-------------------------------------------------------------"
+echo " LibCheck for UNRAID (&version;) has been installed."
+echo " Copyright 2023 - &author;"
+echo "-------------------------------------------------------------"
+echo ""
+</INLINE>
+</FILE>
+
+<!--
+definition for uninstallation of the plugin
+-->
+<FILE Run="/bin/bash" Method="remove">
+<INLINE>
+removepkg &plgPATH;/*.txz
+rm -rf &plgPATH;
+rm -rf &emhttp;
+
+echo ""
+echo "-----------------------------------------------------------"
+echo " LibCheck for UNRAID (&version;) has been removed."
+echo " Copyright 2023 - &author;"
+echo "-----------------------------------------------------------"
+echo ""
+</INLINE>
+</FILE>
+
+</PLUGIN>

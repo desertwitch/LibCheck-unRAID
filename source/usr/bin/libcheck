@@ -1,0 +1,17 @@
+#!/bin/bash
+CHECKED=0
+ERRORSFOUND=0
+for f in /var/log/packages/*; do
+    while read -r line; do
+        if [ -f "/${line}" ]; then
+            if ldd "/${line}" 2>/dev/null | grep found 1>/dev/null 2>/dev/null; then
+                ERRORSFOUND=$((ERRORSFOUND+1))
+                echo "ldd /${line}"
+                ldd "/${line}"
+                echo
+            fi
+        fi
+    done < "$f"
+    CHECKED=$((CHECKED+1))
+done
+echo ">>> checked ${CHECKED} installed packages, found ${ERRORSFOUND} files with missing libraries. <<<"

@@ -1,0 +1,18 @@
+Menu="OtherSettings"
+Type="xmenu"
+Title="LibCheck"
+Icon="cubes"
+Tag="cubes"
+Markdown="false"
+---
+<form>
+<input id="CHECKLIBS" type="button" value="Check For Missing Libraries">
+</form>
+
+<script type="text/javascript">
+  $(function(){
+    $('#CHECKLIBS').click(function(){
+        openBox('/plugins/libcheck/scripts/libcheck', 'Check For Missing Libraries', 600, 600, true);
+    });
+  });
+</script>
