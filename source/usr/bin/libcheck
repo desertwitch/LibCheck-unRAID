@@ -16,4 +16,4 @@ for f in /var/log/packages/*; do
     done < "$f"
     checked=$((checked+1))
 done
-echo ">>> checked ${checked} installed packages, found ${errorsfound} files with missing libraries. <<<"
+echo "Checked ${checked} installed packages, found ${errorsfound} files with missing libraries!"
