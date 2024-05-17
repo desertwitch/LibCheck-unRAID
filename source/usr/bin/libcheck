@@ -1,17 +1,19 @@
 #!/bin/bash
-CHECKED=0
-ERRORSFOUND=0
+checked=0
+errorsfound=0
 for f in /var/log/packages/*; do
     while read -r line; do
         if [ -f "/${line}" ]; then
             if ldd "/${line}" 2>/dev/null | grep found 1>/dev/null 2>/dev/null; then
-                ERRORSFOUND=$((ERRORSFOUND+1))
-                echo "[${f}] ldd /${line}"
+                errorpkgpath="$f"
+                errorpkgfilename=$(basename "$errorpkgpath")
+                echo "[${errorpkgfilename}] ldd /${line}"
                 ldd "/${line}"
                 echo
+                errorsfound=$((errorsfound+1))
             fi
         fi
     done < "$f"
-    CHECKED=$((CHECKED+1))
+    checked=$((checked+1))
 done
-echo ">>> checked ${CHECKED} installed packages, found ${ERRORSFOUND} files with missing libraries. <<<"
+echo ">>> checked ${checked} installed packages, found ${errorsfound} files with missing libraries. <<<"
