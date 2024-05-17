@@ -17,7 +17,7 @@
 <PLUGIN name="&name;" author="&author;" version="&version;" launch="&launch;" pluginURL="&pluginURL;" icon="cubes">
 
 <CHANGES>
-## LibCheck for UNRAID
+## Library Checker for UNRAID
 ###2024.05.17
 - release note: first version of the package
 </CHANGES>
@@ -37,7 +37,7 @@ run the post-installation scripts
 <INLINE> 
 echo ""
 echo "-------------------------------------------------------------"
-echo " LibCheck for UNRAID (&version;) has been installed."
+echo " Library Checker for UNRAID (&version;) has been installed."
 echo " Copyright 2023 - &author;"
 echo "-------------------------------------------------------------"
 echo ""
@@ -55,7 +55,7 @@ rm -rf &emhttp;
 
 echo ""
 echo "-----------------------------------------------------------"
-echo " LibCheck for UNRAID (&version;) has been removed."
+echo " Library Checker for UNRAID (&version;) has been removed."
 echo " Copyright 2023 - &author;"
 echo "-----------------------------------------------------------"
 echo ""

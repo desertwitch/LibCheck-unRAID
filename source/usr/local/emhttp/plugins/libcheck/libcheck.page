@@ -5,9 +5,27 @@ Icon="cubes"
 Tag="cubes"
 Markdown="false"
 ---
-<div>
-<strong>/usr/bin/libcheck</strong>
-<pre>
-<?=shell_exec("/usr/bin/libcheck");?>
-</pre>
-</div>
+
+<table>
+<thead>
+<tr><th>/usr/bin/libcheck</th></tr>
+</thead>
+</table>
+
+<span id="libcheck-result"><div style="text-align:center;"><i class="fa fa-spinner fa-spin"></i> <em>Please wait, retrieving information...</em></div></span>
+
+<script type="text/javascript">
+function getLibCheck() {
+    $.get('/plugins/libcheck/include/get_libcheck.php',function(data) {
+        if (data) { 
+            $('#libcheck-result').html(data); 
+	    } else {
+            getLibCheck();
+        }
+    });
+}
+$(function()
+{
+    getLibCheck();
+});
+</script>
