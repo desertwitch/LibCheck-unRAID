@@ -6,7 +6,7 @@ for f in /var/log/packages/*; do
         if [ -f "/${line}" ]; then
             if ldd "/${line}" 2>/dev/null | grep found 1>/dev/null 2>/dev/null; then
                 ERRORSFOUND=$((ERRORSFOUND+1))
-                echo "ldd /${line}"
+                echo "[${f}] ldd /${line}"
                 ldd "/${line}"
                 echo
             fi
