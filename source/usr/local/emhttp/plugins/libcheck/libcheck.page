@@ -5,6 +5,7 @@ Icon="cubes"
 Tag="cubes"
 Markdown="false"
 ---
+<strong>/usr/bin/libcheck</strong>
 <pre>
 <?=shell_exec("/usr/bin/libcheck");?>
 </pre>
