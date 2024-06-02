@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod +0755 /usr/bin/libcheck
+chmod 755 /usr/bin/libcheck
