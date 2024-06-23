@@ -1,3 +1,3 @@
 <pre>
-<?=shell_exec("/usr/bin/libcheck");?>
+<?=htmlspecialchars(shell_exec("/usr/bin/libcheck") ?? "");?>
 </pre>
