@@ -3,14 +3,14 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name      "libcheck">
 <!ENTITY author    "desertwitch">
-<!ENTITY version   "2024.05.17">
+<!ENTITY version   "2024.06.23">
 <!ENTITY launch    "Settings/libcheck">
 <!ENTITY gitURL    "https://raw.githubusercontent.com/&author;/LibCheck-unRAID/main">
 <!ENTITY pluginURL "&gitURL;/plugin/&name;.plg">
 <!ENTITY pkgURL    "&gitURL;/packages">
 <!ENTITY plgPATH   "/boot/config/plugins/&name;">
-<!ENTITY plgNAME   "libcheck-2024.05.17-x86_64-1">
-<!ENTITY plgMD5    "27a4d2468b1cca753d7b0b2d11b48a65">
+<!ENTITY plgNAME   "libcheck-2024.06.23-x86_64-1">
+<!ENTITY plgMD5    "38a9870aed029f7dedf1c6d6f08fa9fd">
 <!ENTITY emhttp    "/usr/local/emhttp/plugins/&name;">
 ]>
 
