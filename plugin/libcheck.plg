@@ -3,14 +3,14 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name      "libcheck">
 <!ENTITY author    "desertwitch">
-<!ENTITY version   "2024.06.23">
+<!ENTITY version   "2026.05.01">
 <!ENTITY launch    "Settings/libcheck">
 <!ENTITY gitURL    "https://raw.githubusercontent.com/&author;/LibCheck-unRAID/main">
 <!ENTITY pluginURL "&gitURL;/plugin/&name;.plg">
 <!ENTITY pkgURL    "&gitURL;/packages">
 <!ENTITY plgPATH   "/boot/config/plugins/&name;">
-<!ENTITY plgNAME   "libcheck-2024.06.23-x86_64-1">
-<!ENTITY plgMD5    "38a9870aed029f7dedf1c6d6f08fa9fd">
+<!ENTITY plgNAME   "libcheck-2026.05.01-x86_64-1">
+<!ENTITY plgMD5    "f60ddae607f9962988dd19cbd3316584">
 <!ENTITY emhttp    "/usr/local/emhttp/plugins/&name;">
 ]>
 
@@ -18,6 +18,8 @@
 
 <CHANGES>
 ## Library Checker for UNRAID
+###2026.05.01
+- new: update backend to multi-threaded runtime
 ###2024.05.17
 - release note: first version of the package
 </CHANGES>
